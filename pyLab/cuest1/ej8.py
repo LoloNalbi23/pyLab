@@ -2,7 +2,7 @@
 un número ingresado por el usuario es positivo,
 negativo o cero, y también si es un número par o impar."""
 
-n = float(input("Ingrese el numero que quiere comprobar"))
+n = float(input("Ingrese el numero que quiere comprobar: "))
 
 if(n>0):
     print(f"{n} es positivo")
