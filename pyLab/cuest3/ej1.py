@@ -23,3 +23,7 @@ print(f"La primera persona se llama {lista[0]['name']}")
 print(f"La segunda persona tiene {lista[1]['edad']} años")
 print(f"La tercera persona se llama {lista[2]['name']}")
 print(f"La ultima persona se llama {lista[-1]['name']} y tiene {lista[-1]['edad']}")
+
+for k in lista:
+    for v in k:
+        print(f"k es {k} y v es {v}")
