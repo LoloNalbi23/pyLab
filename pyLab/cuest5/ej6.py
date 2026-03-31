@@ -15,15 +15,15 @@ class Tarea:
         self.mes = int(input("Introduzca mes de vencimiento: "))
         self.completada = False
     
-    def completed(self):
+    def completed(self,tasks):
         self.completada = True
         print("Tarea completada, felicitaciones!")
-        tareas.remove(self)
+        tasks.remove(self)
         for i in tareas:
             i.show()
     
-    def delete(self):
-        tareas.remove(self)
+    def delete(self,tasks):
+        tasks.remove(self)
         print("Tarea eliminada con éxito")
         for i in tareas:
             i.show()
@@ -50,12 +50,12 @@ while no_fin:
         name = input("Introduzca el nombre de la tarea a completar")
         for i in tareas:
             if name==i.name:
-                i.completed()
+                i.completed(tareas)
     elif accion==2:
         name = input("Introduzca el nombre de la tarea a eliminar")
         for i in tareas:
             if name==i.name:
-                i.delete()
+                i.delete(tareas)
     elif accion==3:
         tareas.clear
         print("Tareas eliminadas con éxito")
