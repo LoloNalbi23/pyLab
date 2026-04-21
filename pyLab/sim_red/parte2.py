@@ -1,3 +1,5 @@
+import time
+
 class Nodo:
     def __init__(self,nombre):
         self.nombre = nombre
@@ -10,10 +12,21 @@ class Nodo:
         print(f"{self.nombre} envía {mensaje}")
         for nodo in self.conexiones:
             nodo.recibir_mensaje(mensaje,self.nombre)
+            time.sleep(1)
     
     def recibir_mensaje(self,mensaje,emisor):
         print(f"{self.nombre} recibió de {emisor}:{mensaje}")
+        self.conexión_dinámica(emisor)
     
+    def eliminar_conexion(self,nodo):
+        self.conexiones.remove(nodo)
+    
+    def conexión_dinámica(self,nodo):
+        self.name.eliminar_conexión(nodo)
+        time.sleep(1)
+        print("Simulando desconexión y reconexión dinámica…")
+        self.name.agregar_conexiones(nodo)
+        print("¡Hola de nuevo a todos!")
 
 server = Nodo("servidor")
 compu1 = Nodo("Compu1")
