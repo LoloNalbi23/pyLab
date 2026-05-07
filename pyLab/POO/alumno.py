@@ -10,8 +10,8 @@ Los datos solicitados que el alumno completará, tiene que ser indistinto si es 
 
 class Alumno:
     def __init__(self,nombre,apellido,edad,curso,division):
-        self.nombre = nombre
-        self.apellido = apellido
+        self.nombre = nombre.capitalize()
+        self.apellido = apellido.capitalize()
         self.edad = edad
         self.curso = curso
         self.division = division
